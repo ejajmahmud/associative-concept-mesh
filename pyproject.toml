@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "associative-concept-mesh"
+version = "0.1.0"
+description = "Graph-based associative concept mesh calculating semantic link strengths and concept expansion paths"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+associative-concept-mesh = "associative_concept_mesh.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["associative_concept_mesh*"]
